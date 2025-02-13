@@ -21,6 +21,11 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1rem 4rem;
+  position: sticky;
+  background: #fff;
+  top: 0;
+  left: 0;
+  z-index: 11;
 }
 header img {
   height: 2rem;
@@ -42,6 +47,7 @@ header nav {
   height: 100%;
 }
 .intro_container .intro_swiper .swiper-box {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   gap: 2rem;
