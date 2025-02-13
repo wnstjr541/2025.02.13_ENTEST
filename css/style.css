@@ -1,0 +1,180 @@
+html,
+:root {
+  font-size: 10px;
+  transition: font-size 0.3s ease-in-out; /* 애니메이션 적용 */
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("./fonts/Pretendard-Black.woff2") format("woff2"),
+    url("./fonts/Pretendard-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+}
+header img {
+  height: 2rem;
+}
+header nav {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+/* intro */
+.intro_container {
+  height: 50rem;
+  overflow: hidden;
+  position: relative;
+}
+.intro_container .intro_swiper {
+  height: 100%;
+}
+.intro_container .intro_swiper .swiper-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: #fff;
+  padding: 0 50px;
+}
+
+.intro_container .intro_swiper .swiper-box h2 {
+  font-size: 4rem;
+}
+.intro_container .intro_swiper .swiper-box p {
+  font-size: 2rem;
+}
+
+.intro_swiper .swiper-slide:nth-child(1) {
+  background: url("../img/main.jpg") no-repeat center center / cover;
+}
+.intro_swiper .swiper-slide:nth-child(2) {
+  background: url("../img/main.jpg") no-repeat center center / cover;
+}
+
+/* card */
+.card_container {
+  max-width: 1400px;
+  padding: 10rem 2rem;
+  display: flex;
+  margin: 0 auto;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card_container article {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card_container article:hover {
+  transform: scale(1.05); /* 마우스를 올리면 5% 확대 */
+}
+
+.card_container .card_img {
+  height: 300px;
+  overflow: hidden;
+}
+
+.card_container .card_img img {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card_container .card_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2rem 3rem;
+}
+.card_container .card_text > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card_container .card_text > div h3 {
+  font-size: 3rem;
+  line-height: 120%;
+  font-weight: bold;
+}
+
+.card_container .card_text > div p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #6b6969;
+}
+.card_container .card_text span {
+  color: #ccc;
+  font-size: 1.4rem;
+}
+
+/* footer */
+
+footer {
+  padding: 2rem;
+  gap: 1rem;
+  background: #1d1d1d;
+}
+
+footer div {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1400px;
+}
+footer img {
+  height: 20px;
+}
+
+footer p {
+  font-size: 1.5rem;
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  .card_container {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 810px) {
+  .card_container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  html,
+  :root {
+    font-size: 9px;
+  }
+}
+@media (max-width: 375px) {
+  html,
+  :root {
+    font-size: 8px;
+  }
+}
